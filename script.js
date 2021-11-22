@@ -1,19 +1,20 @@
 "use strict";
-// sfdb
-console.log("arr" + " -object");
-console.log(4 + "5");
 
-let incr = 10,
-  decr = 10;
+const numberOfFilm = +prompt("Скільки  кінострічок ви уже переглянули?", "");
 
-++incr;
---decr;
+const personalMovieDB = {
+  count: numberOfFilm,
+  movies: {},
+  // actors: {},
+  // genres: [],
+  privat: false,
+};
 
-console.log(incr);
-console.log(decr);
+const a = prompt("Який фільм дивилися в одстаннє?", ""),
+  b = prompt("як оцінюєте його?"),
+  c = prompt("Який фільм дивилися в одстаннє?", ""),
+  d = prompt("як оцінюєте його?");
 
-console.log(2 + 2 * 2 != 8);
-
-const isChecked = false,
-  isClose = false;
-console.log(isChecked || !isClose);
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+console.log(personalMovieDB);
